@@ -97,5 +97,5 @@ app.get("/", (req, res) => {
 });
 
 server.listen(3001, () => {
-  console.log("listening on localhost:3000");
+  console.log("listening on localhost:3001");
 });

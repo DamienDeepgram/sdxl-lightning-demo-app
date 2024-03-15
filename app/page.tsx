@@ -8,6 +8,7 @@ import { Input } from "@/components/ui/input";
 import { ModelIcon } from "@/components/icons/model-icon";
 import Link from "next/link";
 import { io } from 'socket.io-client';
+import { ModelIconDeepgram } from "@/components/icons/model-icon-deepgram";
 
 let connected = false;
 let socket;
@@ -207,17 +208,12 @@ export default function Lightning() {
           </div>
         </div>
         <div className="container flex flex-col items-center justify-center my-4">
-          <p className="text-sm text-base-content/70 py-4 text-center text-neutral-400">
-            This playground is hosted on{" "}
-            <strong>
-              <a href="https://fal.ai" className="underline" target="_blank">
-                fal.ai
-              </a>
-            </strong>{" "}
-            and is for demonstration purposes only.
-          </p>
           <div className="flex flex-row items-center space-x-2">
             <span className="text-xs font-mono">powered by</span>
+            <Link href="https://deepgram.com" target="_blank">
+              <ModelIconDeepgram />
+            </Link>
+            +
             <Link href="https://fal.ai" target="_blank">
               <ModelIcon />
             </Link>
